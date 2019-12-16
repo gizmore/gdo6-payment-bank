@@ -35,7 +35,7 @@ final class Confirm extends MethodPayment
 			$module->cfgBIC(),
 			$module->cfgIBAN(),
 			$module->getTransferPurpose($order),
-			$order->getPrice(),
+			$order->displayPrice(),
 		);
 		$mail->setBody(tusr($user, 'mail_body_pay_bank', $tVars));
 		$mail->sendToUser($user);

@@ -7,6 +7,7 @@ use GDO\DB\GDT_String;
 use GDO\PaymentBank\Module_PaymentBank;
 use GDO\UI\GDT_Button;
 use GDO\UI\GDT_Bar;
+use GDO\Payment\GDT_Money;
 
 /** @var $order GDO_Order **/
 $order instanceof GDO_Order;
@@ -24,6 +25,7 @@ $card->addFields(array(
 	$module->getConfigColumn('owner'),
 	$module->getConfigColumn('iban'),
 	$module->getConfigColumn('bic'),
+	GDT_Money::make('price')->val($order->getPrice()),
 	GDT_String::make('purpose')->val($module->getTransferPurpose($order)),
 ));
 

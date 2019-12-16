@@ -16,7 +16,7 @@ final class InitPayment extends MethodPayment
 	{
 		$user = GDO_User::current();
 		# Check
-		$order = $this->getOrder();
+		$order = $this->getOrderPersisted();
 		if ((!$order->isCreator($user)))
 		{
 			return $this->error('err_order')->add(
