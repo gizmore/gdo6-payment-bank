@@ -52,4 +52,8 @@ final class Module_PaymentBank extends PaymentModule
 		return sprintf('%s-%s-%09d', sitename(), $year, $order->getID());
 	}
 	
+	public function renderOrderFragment(GDO_Order $order)
+	{
+		return $this->templatePHP('order_fragment.php', ['order' => $order]);
+	}
 }
