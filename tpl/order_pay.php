@@ -31,8 +31,8 @@ $card->addFields(array(
 
 $card->addField(
 	GDT_Bar::make()->horizontal()->addFields(array(
-		GDT_Button::make('confirm')->href(href('PaymentBank', 'Confirm', "&order={$order->getID()}")),
-		GDT_Button::make('cancel')->href(href('PaymentBank', 'Cancel', "&order={$order->getID()}")),
+		GDT_Button::make('confirm')->label('btn_confirm')->href(href('PaymentBank', 'Confirm', "&order={$order->getID()}")),
+		GDT_Button::make('cancel')->label('btn_cancel')->href(href('PaymentBank', 'Cancel', "&order={$order->getID()}")),
 	)),
 );
 
