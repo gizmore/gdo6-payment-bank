@@ -3,7 +3,6 @@ namespace GDO\PaymentBank;
 
 use GDO\Payment\PaymentModule;
 use GDO\Payment\GDO_Order;
-use GDO\Date\Time;
 use GDO\DB\GDT_String;
 
 final class Module_PaymentBank extends PaymentModule
@@ -11,9 +10,9 @@ final class Module_PaymentBank extends PaymentModule
 	#####################
 	### PaymentModule ###
 	#####################
-	public function makePaymentButton($href)
+	public function makePaymentButton(GDO_Order $order=null)
 	{
-		$button = parent::makePaymentButton($href);
+		$button = parent::makePaymentButton($order);
 		return $button->label('buy_bank_transfer');
 	}
 	
@@ -44,9 +43,9 @@ final class Module_PaymentBank extends PaymentModule
 		return $this->templatePHP('order_fragment.php', ['order' => $order]);
 	}
 
-	public function getFooterHTML()
+	public function getFooterHTML(GDO_Order $order=null)
 	{
-		return $this->templatePHP('pdf_footer_html.php');
+		return $this->templatePHP('pdf_footer_html.php', ['order' => $order]);
 	}
 
 }
