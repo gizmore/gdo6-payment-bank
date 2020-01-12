@@ -6,6 +6,7 @@ use GDO\Payment\MethodPayment;
 use GDO\PaymentBank\Module_PaymentBank;
 use GDO\User\GDO_User;
 use GDO\Mail\Mail;
+use GDO\Payment\PaymentPDF;
 
 final class Confirm extends MethodPayment
 {
@@ -38,8 +39,9 @@ final class Confirm extends MethodPayment
 			$order->displayPrice(),
 		);
 		$mail->setBody(tusr($user, 'mail_body_pay_bank', $tVars));
+		$file = PaymentPDF::generate($user, $order);
+		$mail->addAttachmentFile(tusr('attach_title_bill'), $file->getPath());
 		$mail->sendToUser($user);
 	}
-	
 	
 }
