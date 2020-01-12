@@ -1,3 +1,3 @@
 <?phpuse GDO\Payment\GDO_Order;
-use GDO\UI\GDT_Card;use GDO\PaymentBank\Module_PaymentBank;/** @var $order GDO_Order **/
-$order instanceof GDO_Order;$module = Module_PaymentBank::instance(); $card = GDT_Card::make();$card->addFields(array(	$module->getConfigColumn('owner'),	$module->getConfigColumn('bic'),	$module->getConfigColumn('iban'),));echo $card->render();
+use GDO\UI\GDT_Card;use GDO\PaymentBank\Module_PaymentBank;use GDO\DB\GDT_String;use GDO\Payment\GDT_Money;/** @var $order GDO_Order **/
+$order instanceof GDO_Order;$module = Module_PaymentBank::instance(); $card = GDT_Card::make();$card->addFields(array(	$module->getConfigColumn('owner'),	$module->getConfigColumn('bic'),	$module->getConfigColumn('iban'),	GDT_Money::make('price')->val($order->getPrice()),	GDT_String::make('purpose')->val($module->getTransferPurpose($order)),));if ($order->isPersisted()){	echo $card->render();}

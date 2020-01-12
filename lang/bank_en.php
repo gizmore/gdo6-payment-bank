@@ -1,6 +1,7 @@
 <?php
 return array(
 'module_paymentbank' => 'Bank Transfer',
+'payment_paymentbank' => 'Bank Transfer',
 'btn_pay_bank' => 'Pay with Bank Transfer',
 
 'cfg_bic' => 'BIC',

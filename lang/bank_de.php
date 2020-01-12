@@ -1,6 +1,7 @@
 <?php
 return array(
-'module_paymentbank' => 'Überweisung',
+'module_paymentbank' => 'Überweisungen',
+'payment_paymentbank' => 'Überweisung',
 'btn_pay_bank' => 'Mit Überweisung bezahlen',
 
 'cfg_bic' => 'BIC',

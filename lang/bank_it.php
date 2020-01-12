@@ -1,6 +1,8 @@
 <?php
 return array(
 'module_paymentbank' =>'Bonifico bancario',
+'payment_paymentbank' => 'Bonifico bancario',
+	
 'btn_pay_bank' => 'Pagare con bonifico bancario',
 
 'cfg_bic' => 'BIC',
