@@ -26,8 +26,8 @@ $card->addFields(array(
 	$module->getConfigColumn('iban'),
 	$module->getConfigColumn('bic'),
 	GDT_Money::make('total_tax')->label('pdforder_sum_tax', [$order->getTax()])->value($order->getPriceMWST()),
-	GDT_Money::make('price')->val($order->getPrice()),
-	GDT_String::make('purpose')->val($module->getTransferPurpose($order)),
+	GDT_Money::make('price')->var($order->getPrice()),
+	GDT_String::make('purpose')->var($module->getTransferPurpose($order)),
 ));
 
 $card->addField(
