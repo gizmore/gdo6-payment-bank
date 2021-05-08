@@ -19,7 +19,7 @@ final class InitPayment extends MethodPayment
 		$order = $this->getOrderPersisted();
 		if ((!$order->isCreator($user)))
 		{
-			return $this->error('err_order')->add(
+			return $this->error('err_order')->addField(
 				$order ? $order->redirectFailure() : Website::redirect(href(GDO_MODULE, GDO_METHOD)));
 		}
 		$tVars = array(

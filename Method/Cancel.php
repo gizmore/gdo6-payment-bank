@@ -20,7 +20,7 @@ final class Cancel extends MethodPayment
 		if ( (!$order->isPaid()) && ($order->getCreator()===$user) )
 		{
 			$order->delete();
-    		return $this->message('msg_order_cancelled')->add(Website::redirect($order->href_failure()));
+    		return $this->message('msg_order_cancelled')->addField(Website::redirect($order->href_failure()));
 		}
 
 		return $this->error('err_order_cancel');
