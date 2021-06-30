@@ -18,6 +18,7 @@ final class GDT_BLZ extends GDT_Char
         $this->ascii();
         $this->caseS();
         $this->icon('bank');
+        $this->label('blz');
     }
     
 }

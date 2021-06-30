@@ -14,6 +14,7 @@ return array(
 'p_pay_with_bank' => 'Please transfer the total amount to our bank account to execute your order.',
 'iban' => 'IBAN',
 'bic' => 'BIC',
+'blz' => 'BLZ',
 'owner' => 'Owner',
 'purpose' => 'Purpose',
 	

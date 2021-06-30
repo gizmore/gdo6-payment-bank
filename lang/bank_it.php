@@ -15,6 +15,7 @@ return array(
 'p_pay_with_bank' => 'La invitiomo di versare l´importo sul nostro conto bancario per poter svolgere la sua ordinazione.',
 'iban' => 'IBAN',
 'bic' => 'BIC',
+'blz' => 'BLZ',
 'owner' => 'Intestatario',
 'purpose' => 'Causale',
 	

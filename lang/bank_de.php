@@ -14,6 +14,7 @@ return array(
 'p_pay_with_bank' => 'Bitte überweisen Sie den Gesamtbetrag zu unserem Bankkonto um Ihre Bestellung auszuführen.',
 'iban' => 'IBAN',
 'bic' => 'BIC',
+'blz' => 'BLZ',
 'owner' => 'Kontoinhaber',
 'purpose' => 'Verwendungszweck',
 	
