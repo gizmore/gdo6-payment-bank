@@ -26,7 +26,7 @@ final class GDT_BIC extends GDT_String
 	{
 	    if (parent::validate($value))
 	    {
-	        return true; # @todo Implement BIC check
+	        return true; # @TODO Implement BIC check
 	    }
 	}
 	
